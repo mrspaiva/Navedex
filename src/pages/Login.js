@@ -1,5 +1,5 @@
-// export default function Login() {
-//   return (
-//     <h1>Hello</h1>
-//   )
-// }
+export default function Login() {
+  return (
+    <h1>Olá</h1>
+  )
+}
