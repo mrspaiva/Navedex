@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { LoginContainer, ContentSection, Logo, Button, Email, Password } from './styles'
 
 import logo from '../../img/logo.png'
@@ -19,7 +20,9 @@ export default function Login() {
           <input type="text" name="senha" placeholder="Senha"/>
         </Password>
 
-        <Button type="submit">Entrar</Button>
+        <Link to='/home'>
+          <Button type="submit">Entrar</Button>
+        </Link>
       </ContentSection>
     </LoginContainer>
   )
