@@ -6,7 +6,6 @@ export const CardContainer = styled.div`
 
   width: 17.5rem;
   height: 23.5rem;
-  border: 1px solid #000;
 
   font-family: 'Montserrat', sans-serif;
 
@@ -21,5 +20,23 @@ export const CardContainer = styled.div`
 
   p {
     font-weight: 400
+  }
+`
+
+export const IconsSection = styled.section`
+  .deleteIcon, .updateIcon {
+    margin-top: 0.8rem;
+  }
+
+  .deleteIcon {
+    width: 0.9rem;
+    height: 1.1rem;
+    margin-left: 0.3rem;
+    margin-right: 1rem;
+  }
+
+  .updateIcon {
+    width: 1.1rem;
+    height: 1.1rem;
   }
 `
