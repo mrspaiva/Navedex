@@ -1,9 +1,14 @@
-import { LoginContainer, ContentSection, Button, Email, Password } from './styles'
+import { LoginContainer, ContentSection, Logo, Button, Email, Password } from './styles'
+
+import logo from '../../img/logo.png'
 
 export default function Login() {
   return (
     <LoginContainer>
       <ContentSection>
+      
+        <Logo src={logo} alt=""/>
+
         <Email>
           <label htmlFor="email">E-mail</label>
           <input type="text" name="email" placeholder="E-mail"/>
