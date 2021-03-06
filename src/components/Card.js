@@ -14,7 +14,7 @@ export default function Card() {
         <Link to="/">
           <img className='deleteIcon' src={deleteIcon} alt=""/>
         </Link>
-        <Link to="/">
+        <Link to="/editnaver">
           <img className='updateIcon' src={updateIcon} alt=""/>
         </Link>
       </IconsSection>
