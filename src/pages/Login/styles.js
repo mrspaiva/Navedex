@@ -10,7 +10,7 @@ export const LoginContainer = styled.div`
   font-weight: 600;
 `
 
-export const ContentSection = styled.section`
+export const ContentSection = styled.form`
   width: 28rem;
   height: 25.5rem;
   border: 1px solid #212121;
@@ -36,7 +36,6 @@ export const Email = styled.div`
     width: 24rem;
     height: 2.5rem;
     padding: 0 0.4rem;
-    color: #9E9E9E;
   }
 `
 
@@ -52,7 +51,6 @@ export const Password = styled.div`
     width: 24rem;
     height: 2.5rem;
     padding: 0 0.4rem;
-    color: #9E9E9E;
   }
 `
 
