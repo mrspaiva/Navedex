@@ -1,14 +1,13 @@
 import styled from 'styled-components'
 
 export const CardContainer = styled.div`
-  margin-left: 2rem;
-
   width: 17.5rem;
   height: 23.5rem;
 
   font-family: 'Montserrat', sans-serif;
 
   img {
+    width: 17.5rem;
     height: 17.5rem;
     margin-bottom: 1rem;
   }
@@ -20,6 +19,7 @@ export const CardContainer = styled.div`
   p {
     font-weight: 400
   }
+
 `
 
 export const IconsSection = styled.section`
