@@ -4,32 +4,12 @@ import { CardContainer, IconsSection } from './CardStyle'
 import deleteIcon from '../img/delete.png'
 import updateIcon from '../img/update.png'
 
-import api from '../services/api'
-
-export default function Card() {
-  const [navers, setNavers] = useState([])
-
-  const token = localStorage.getItem('@Navedex:Token')
-  useEffect(() => {
-
-    api.get('navers', {
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-    })
-    .then(response => {
-      setNavers(response.data)
-    })
-  }, [token])
-
+export default function Card(props) {
   return (
       <CardContainer>
-        <ul>
-          {navers.map(naver => (
-          <li key={naver.id}>
-            <img src={naver.url} alt=""/>
-            <strong>{naver.name}</strong>
-            <p>Front-end Developer</p>
+            <img src={props.img} alt=""/>
+            <strong>{props.name}</strong>
+            <p>{props.job}</p>
             
             <IconsSection>
               <Link to="/">
@@ -39,9 +19,6 @@ export default function Card() {
                 <img className='updateIcon' src={updateIcon} alt=""/>
               </Link>
             </IconsSection>
-          </li>
-        ))}
-        </ul>
     </CardContainer>
   )
 }
