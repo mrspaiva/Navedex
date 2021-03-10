@@ -1,30 +1,48 @@
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { FormContainer, TextContainer, Text, InputContainer, SaveButton } from './FormStyle'
 import arrowLeft from '../img/arrowLeft.png'
 import { useState } from 'react'
 
+import api from '../services/api'
+
 
 export default function Form(props) {
-  const [name, setName] = useState([])
-  const [age, setAge] = useState([])
-  const [projects, setProjects] = useState([])
-  const [jobTitle, setJobTitle] = useState([])
-  const [workingTime, setWorkingTime] = useState([])
+  const [name, setName] = useState('')
+  const [birthdate, setBirthdate] = useState('')
+  const [project, setProject] = useState('')
+  const [job_role, setJob_role] = useState('')
+  const [admission_date, setAdmission_date] = useState('')
   const [url, setUrl] = useState([])
 
+  const history = useHistory();
+  const token = localStorage.getItem('@Navedex:Token')
 
-  function click() {
-    console.log({
+  async function handleSubmit(e) {
+    e.preventDefault()
+
+    const data = {
       name,
-      age,
-      projects,
-      jobTitle,
-      workingTime
-    })
+      birthdate,
+      project,
+      job_role,
+      admission_date,
+      url
+    }
+
+    try {
+      await api.post('navers', data, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+      history.push("/home")
+    } catch (err) {
+      alert("Erro ao cadastrar caso. Tente novamente.")
+    }
   }
 
   return (
-    <FormContainer>
+    <FormContainer onSubmit={handleSubmit}>
 
       <TextContainer>
         <Link to='/home'>
@@ -49,8 +67,8 @@ export default function Form(props) {
         type="text" 
         name="idade" 
         placeholder="Idade"
-        value={age} 
-        onChange={e => setAge(e.target.value)}
+        value={birthdate} 
+        onChange={e => setBirthdate(e.target.value)}
         />
         
         <label htmlFor="p">Projetos que participou</label>
@@ -58,8 +76,8 @@ export default function Form(props) {
         type="text" 
         name="p" 
         placeholder="Projetos que participou"
-        value={projects} 
-        onChange={e => setProjects(e.target.value)}
+        value={project} 
+        onChange={e => setProject(e.target.value)}
         />
         
         <label htmlFor="cargo">Cargo</label>
@@ -67,8 +85,8 @@ export default function Form(props) {
         type="text" 
         name="cargo" 
         placeholder="Cargo"
-        value={jobTitle} 
-        onChange={e => setJobTitle(e.target.value)}
+        value={job_role} 
+        onChange={e => setJob_role(e.target.value)}
         />
         
         <label htmlFor="tempo">Tempo de empresa</label>
@@ -76,8 +94,8 @@ export default function Form(props) {
         type="text" 
         name="cargo" 
         placeholder="Tempo de empresa"
-        value={workingTime} 
-        onChange={e => setWorkingTime(e.target.value)}
+        value={admission_date} 
+        onChange={e => setAdmission_date(e.target.value)}
         />
         
         <label htmlFor="url">URL da foto Naver</label>
@@ -90,7 +108,7 @@ export default function Form(props) {
         />
       </InputContainer>
 
-      <SaveButton onClick={click}>Salvar</SaveButton>
+      <SaveButton>Salvar</SaveButton>
 
     </FormContainer>
   )
