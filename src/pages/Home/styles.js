@@ -47,3 +47,44 @@ export const CardWrapper = styled.section`
   margin-right: 0;
   justify-items: center;
 `
+
+export const NaverImg = styled.img`
+  width: 50%;
+`
+
+export const InfoNaver = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 2rem;
+
+  font-family: 'Montserrat', sans-serif;
+
+  strong {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+
+  p {
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #212121;
+  }
+
+  span {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #212121;
+  }
+`
+
+export const IconsNaver = styled.section`
+  display: flex;
+  margin-top: 8rem;
+
+  img {
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+`
