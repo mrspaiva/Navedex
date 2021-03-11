@@ -11,7 +11,7 @@ export default function Routes() {
         <Route path='/' exact component={Login}/>
         <Route path='/home' component={Home}/>
         <Route path='/addnaver' component={AddNaver}/>
-        <Route path='/editnaver' component={EditNaver}/>
+        <Route path='/editnaver/:id' component={EditNaver}/>
       </Switch>
     </BrowserRouter>
   )
