@@ -14,8 +14,19 @@ Além disso, se tem a posibilidade de criar, editar e excluir um Naver.
   <li><a href="https://styled-components.com/">Styled Components</a></li>
   <li><a href="https://momentjs.com/">Moment</a></li>
   <li><a href="https://github.com/axios/axios">Axios</a></li>
-  
 </ul>
+
+### Como rodar este projeto:
+ ```bash
+ # Clone este repositório 
+ $ git clone https://github.com/mrspaiva/teste-supera.git
+ 
+ # Instale todas as dependências
+ $ yarn install
+ 
+ # Rode o app com o Expo
+ $ expo start
+ ```
 
 <h3>📝 Licença</h3>
 <p>Este projeto está sob licença <a href="./LICENSE">MIT</a></p>
