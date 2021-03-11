@@ -1,5 +1,5 @@
 <h1 align="center">Navedex App :rocket:</h1>
-<p align="center">Uma aplicação para cadastro, edição e visualição dos Navers (equipe da empresa <a href="https://github.com/naveteam">Nave</a>) </p>
+<p align="center">Uma aplicação para cadastro, edição e visualização dos Navers (equipe da empresa <a href="https://github.com/naveteam">Nave</a>) </p>
 
 <h3>💻 Sobre o projeto</h3>
 <p>O projeto consiste em uma página de login para autenticação, e uma vez dentro da aplicação, é apresentada a visualização de todos os Navers.
