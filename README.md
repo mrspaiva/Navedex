@@ -19,13 +19,13 @@ Além disso, se tem a posibilidade de criar, editar e excluir um Naver.
 ### Como rodar este projeto:
  ```bash
  # Clone este repositório 
- $ git clone https://github.com/mrspaiva/teste-supera.git
+ $ git clone https://github.com/mrspaiva/Navedex.git
  
  # Instale todas as dependências
- $ yarn install
+ $ yarn
  
  # Rode o app com o Expo
- $ expo start
+ $ yarn start
  ```
 
 <h3>📝 Licença</h3>
