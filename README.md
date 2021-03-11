@@ -2,8 +2,8 @@
 <p align="center">Uma aplicação para cadastro, edição e visualição dos Navers (equipe da empresa <a href="https://github.com/naveteam">Nave</a>) </p>
 
 <h3>💻 Sobre o projeto</h3>
-<p>O projeto consiste em uma página de login para autentição, e uma vez dentro da aplicação, é apresentada a visualização de todos os Navers.
-Além disso, se tem a posibilidade de criar, editar e excluir um Naver.
+<p>O projeto consiste em uma página de login para autenticação, e uma vez dentro da aplicação, é apresentada a visualização de todos os Navers.
+Além disso, se tem a possibilidade de criar, editar e excluir um Naver.
 </p>
 
 <h3>🔨 Tecnologias</h3>  
