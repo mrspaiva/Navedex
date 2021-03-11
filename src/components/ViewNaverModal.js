@@ -1,5 +1,5 @@
 import closeIcon from '../img/close.png'
-import { ViewOverlay, ViewContainer, CloseButton } from './ViewNaverModalStyle'
+import { ViewOverlay, ViewContainer, InfoContent, CloseButton } from './ViewNaverModalStyle'
 
 export default function ViewNaverModal ({ isOpen, onClickClose, children }) {
   if(!isOpen) {
@@ -9,10 +9,14 @@ export default function ViewNaverModal ({ isOpen, onClickClose, children }) {
   return (
     <ViewOverlay>
       <ViewContainer>
-        {children}  
+      <InfoContent>
+          {children}  
+          
         <CloseButton onClick={onClickClose}>
-          <img  src={closeIcon} alt=""/>
+          <img src={closeIcon} alt=""/>
         </CloseButton>
+
+      </InfoContent>
       </ViewContainer>
     </ViewOverlay>
   )
