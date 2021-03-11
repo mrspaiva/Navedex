@@ -18,20 +18,28 @@ export const ViewContainer = styled.div`
   width: 62.9rem;
   height: 31.4rem;
 
+  position: relative;
+`
+
+export const InfoContent = styled.div`
+  width: 62.9rem;
+  height: 31.4rem;
   display: flex;
 `
-export const CloseButton = styled.button`
+
+export const CloseButton = styled.div`
   width: 1rem;
   height: 1rem;
 
   background: #fff;
   border: 0;
-  margin-left: 14rem;
   margin-top: 1.4rem;
+  position: absolute;
+  right: 2rem;
   cursor: pointer;
 
   img {
-    height: 0.9rem;
-    width: 0.9rem;
+    height: 1rem;
+    width: 1rem;
   }
 `
