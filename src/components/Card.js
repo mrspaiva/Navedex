@@ -1,24 +1,19 @@
-import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
 import { CardContainer, IconsSection } from './CardStyle'
 import deleteIcon from '../img/delete.png'
 import updateIcon from '../img/update.png'
 
-export default function Card(props) {
+export default function Card({img, onClickCard, name, job, del, onClickEdit}) {
   return (
       <CardContainer>
-            <img src={props.img} alt=""/>
-            <strong>{props.name}</strong>
-            <p>{props.job}</p>
-            
-            <IconsSection>
-              <Link to="/">
-                <img className='deleteIcon' src={deleteIcon} alt=""/>
-              </Link>
-              <Link to="/editnaver">
-                <img className='updateIcon' src={updateIcon} alt=""/>
-              </Link>
-            </IconsSection>
+        <img src={img} alt="" onClick={onClickCard}/>
+        <strong>{name}</strong>
+        <p>{job}</p>
+        
+        <IconsSection>
+          <img onClick={del} className='deleteIcon' src={deleteIcon} alt=""/>
+
+          <img onClick={onClickEdit} className='updateIcon' src={updateIcon} alt=""/>
+        </IconsSection>
     </CardContainer>
   )
 }
