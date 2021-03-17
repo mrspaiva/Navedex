@@ -24,7 +24,7 @@ Além disso, se tem a possibilidade de criar, editar e excluir um Naver.
  # Instale todas as dependências
  $ yarn
  
- # Rode o app com o Expo
+ # Rode o app
  $ yarn start
  ```
 
